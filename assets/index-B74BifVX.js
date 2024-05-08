@@ -2942,7 +2942,7 @@ Available fill gap methods: `).concat(Z,"."))}},H=function(C){if(C){var Z=a(C);Z
   margin-top: 12px;
 
   .${ae.BUTTON_CN} {
-    padding: 4px 8px;
+    padding: 4px;
   }
 
   @media (${ae.tabletMedia}) {
