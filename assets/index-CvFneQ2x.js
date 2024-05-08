@@ -3026,7 +3026,7 @@ Available fill gap methods: `).concat(Z,"."))}},H=function(C){if(C){var Z=a(C);Z
   @media (${ae.tabletMedia}) {
     max-width: 370px;
   }
-`,tme=({searchValue:e,onSearch:t})=>R.jsxs(Zve,{children:[R.jsx(Jve,{src:"/carusel_gp_site//logo.png",width:66,alt:"logo",onClick:()=>window.location.reload()}),R.jsx(eme,{leftSlot:R.jsx(ae.Icon.Search,{}),placeholder:"Поиск по магазину",onChange:t,value:e})]}),rme=Le.div`
+`,tme=({searchValue:e,onSearch:t})=>R.jsxs(Zve,{children:[R.jsx(Jve,{src:"/shop//logo.png",width:66,alt:"logo",onClick:()=>window.location.reload()}),R.jsx(eme,{leftSlot:R.jsx(ae.Icon.Search,{}),placeholder:"Поиск по магазину",onChange:t,value:e})]}),rme=Le.div`
   display: flex;
   flex-direction: column;
   overflow: auto;
