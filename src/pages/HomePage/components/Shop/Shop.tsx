@@ -66,7 +66,7 @@ export const Shop = () => {
         )}
         <StyledShopGroup>
           {activeFilteredGroups.map(({ name, description, isToggle, items }, shopIndex) => (
-            <StyledShopGroupItem key={`${name}_${shopIndex}`}>
+            <StyledShopGroupItem key={`${name}_${shopIndex}_${items.length}`}>
               <AccordionItem title={name} description={description} isInitialOpen={!isToggle}>
                 <StyledShopItems>
                   {items.map(item => (
