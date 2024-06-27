@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.4.0",
     "@tanstack/react-query": "^5.28.14",
     "elui-react": "^0.5.2",
     "normalize.css": "^8.0.1",

@@ -16,6 +16,7 @@ export type TShopGroupItem = {
 
 export type TShopGroup = {
   id: number;
+  isToggle: boolean;
   name: string;
   description: string;
 };

@@ -4,6 +4,7 @@ import { useFirstMountState } from 'react-use/esm/useFirstMountState';
 
 import type { TShopItemType } from 'services/api';
 import { useShopGroupsQuery } from 'services';
+import { AccordionItem } from 'components/AccordionItem';
 
 import { TGroup, TShopContext } from './types';
 import { ShopProvider, useSelectedItems, useShopSearch } from './hooks';
@@ -64,19 +65,15 @@ export const Shop = () => {
           <Typography variant="h6">{`По запросу «${debounceSearch}» ничего не найдено`}</Typography>
         )}
         <StyledShopGroup>
-          {activeFilteredGroups.map(({ name, description, items }, shopIndex) => (
-            <StyledShopGroupItem key={shopIndex}>
-              <Typography variant="h4" typographyStyle={{ display: 'block', maxWidth: 500, paddingBottom: 8 }}>
-                {name}
-              </Typography>
-              <Typography color="grey_800" typographyStyle={{ display: 'block', maxWidth: 1100, marginBottom: 24 }}>
-                {description}
-              </Typography>
-              <StyledShopItems>
-                {items.map(item => (
-                  <ItemCard key={item.id} {...{ item }} />
-                ))}
-              </StyledShopItems>
+          {activeFilteredGroups.map(({ name, description, isToggle, items }, shopIndex) => (
+            <StyledShopGroupItem key={`${name}_${shopIndex}`}>
+              <AccordionItem title={name} description={description} isInitialOpen={!isToggle}>
+                <StyledShopItems>
+                  {items.map(item => (
+                    <ItemCard key={item.id} {...{ item }} />
+                  ))}
+                </StyledShopItems>
+              </AccordionItem>
             </StyledShopGroupItem>
           ))}
         </StyledShopGroup>
